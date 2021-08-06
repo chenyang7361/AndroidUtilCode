@@ -180,6 +180,7 @@ public final class PathUtils {
      * @return the path of /storage/emulated/0
      */
     public static String getExternalStoragePath() {
+        // test
         if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
         return getAbsolutePath(Environment.getExternalStorageDirectory());
     }

@@ -448,9 +448,6 @@ class UtilsBridge {
     ///////////////////////////////////////////////////////////////////////////
     // SDCardUtils
     ///////////////////////////////////////////////////////////////////////////
-    static String getSDCardPathByEnvironment() {
-        return SDCardUtils.getSDCardPathByEnvironment();
-    }
 
     static boolean isSDCardEnableByEnvironment() {
         return SDCardUtils.isSDCardEnableByEnvironment();

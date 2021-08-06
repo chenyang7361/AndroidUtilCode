@@ -34,11 +34,8 @@ class SDCardActivity : CommonActivity() {
     override fun bindItems(): MutableList<CommonItem<*>> {
         return CollectionUtils.newArrayList(
                 CommonItemTitle("isSDCardEnableByEnvironment", SDCardUtils.isSDCardEnableByEnvironment().toString()),
-                CommonItemTitle("getSDCardPathByEnvironment", SDCardUtils.getSDCardPathByEnvironment()),
                 CommonItemTitle("getSDCardInfo", SDCardUtils.getSDCardInfo().toString()),
                 CommonItemTitle("getMountedSDCardPath", SDCardUtils.getMountedSDCardPath().toString()),
-                CommonItemTitle("getExternalTotalSize", ConvertUtils.byte2FitMemorySize(SDCardUtils.getExternalTotalSize(), 2)),
-                CommonItemTitle("getExternalAvailableSize", ConvertUtils.byte2FitMemorySize(SDCardUtils.getExternalAvailableSize(), 2)),
                 CommonItemTitle("getInternalTotalSize", ConvertUtils.byte2FitMemorySize(SDCardUtils.getInternalTotalSize(), 2)),
                 CommonItemTitle("getInternalAvailableSize", ConvertUtils.byte2FitMemorySize(SDCardUtils.getInternalAvailableSize(), 2))
         )

@@ -174,118 +174,6 @@ public final class PathUtils {
         return getAbsolutePath(Utils.getApp().getNoBackupFilesDir());
     }
 
-    /**
-     * Return the path of /storage/emulated/0.
-     *
-     * @return the path of /storage/emulated/0
-     */
-    public static String getExternalStoragePath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        return getAbsolutePath(Environment.getExternalStorageDirectory());
-    }
-
-    /**
-     * Return the path of /storage/emulated/0/Music.
-     *
-     * @return the path of /storage/emulated/0/Music
-     */
-    public static String getExternalMusicPath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        return getAbsolutePath(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC));
-    }
-
-    /**
-     * Return the path of /storage/emulated/0/Podcasts.
-     *
-     * @return the path of /storage/emulated/0/Podcasts
-     */
-    public static String getExternalPodcastsPath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        return getAbsolutePath(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PODCASTS));
-    }
-
-    /**
-     * Return the path of /storage/emulated/0/Ringtones.
-     *
-     * @return the path of /storage/emulated/0/Ringtones
-     */
-    public static String getExternalRingtonesPath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        return getAbsolutePath(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_RINGTONES));
-    }
-
-    /**
-     * Return the path of /storage/emulated/0/Alarms.
-     *
-     * @return the path of /storage/emulated/0/Alarms
-     */
-    public static String getExternalAlarmsPath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        return getAbsolutePath(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_ALARMS));
-    }
-
-    /**
-     * Return the path of /storage/emulated/0/Notifications.
-     *
-     * @return the path of /storage/emulated/0/Notifications
-     */
-    public static String getExternalNotificationsPath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        return getAbsolutePath(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_NOTIFICATIONS));
-    }
-
-    /**
-     * Return the path of /storage/emulated/0/Pictures.
-     *
-     * @return the path of /storage/emulated/0/Pictures
-     */
-    public static String getExternalPicturesPath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        return getAbsolutePath(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES));
-    }
-
-    /**
-     * Return the path of /storage/emulated/0/Movies.
-     *
-     * @return the path of /storage/emulated/0/Movies
-     */
-    public static String getExternalMoviesPath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        return getAbsolutePath(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES));
-    }
-
-    /**
-     * Return the path of /storage/emulated/0/Download.
-     *
-     * @return the path of /storage/emulated/0/Download
-     */
-    public static String getExternalDownloadsPath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        return getAbsolutePath(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS));
-    }
-
-    /**
-     * Return the path of /storage/emulated/0/DCIM.
-     *
-     * @return the path of /storage/emulated/0/DCIM
-     */
-    public static String getExternalDcimPath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        return getAbsolutePath(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM));
-    }
-
-    /**
-     * Return the path of /storage/emulated/0/Documents.
-     *
-     * @return the path of /storage/emulated/0/Documents
-     */
-    public static String getExternalDocumentsPath() {
-        if (!UtilsBridge.isSDCardEnableByEnvironment()) return "";
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
-            return getAbsolutePath(Environment.getExternalStorageDirectory()) + "/Documents";
-        }
-        return getAbsolutePath(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS));
-    }
 
     /**
      * Return the path of /storage/emulated/0/Android/data/package.
@@ -432,13 +320,6 @@ public final class PathUtils {
         return getAbsolutePath(Utils.getApp().getObbDir());
     }
 
-    public static String getRootPathExternalFirst() {
-        String rootPath = getExternalStoragePath();
-        if (TextUtils.isEmpty(rootPath)) {
-            rootPath = getRootPath();
-        }
-        return rootPath;
-    }
 
     public static String getAppDataPathExternalFirst() {
         String appDataPath = getExternalAppDataPath();

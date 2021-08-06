@@ -35,17 +35,6 @@ public final class SDCardUtils {
         return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState());
     }
 
-    /**
-     * Return the path of sdcard by environment.
-     *
-     * @return the path of sdcard by environment
-     */
-    public static String getSDCardPathByEnvironment() {
-        if (isSDCardEnableByEnvironment()) {
-            return Environment.getExternalStorageDirectory().getAbsolutePath();
-        }
-        return "";
-    }
 
     /**
      * Return the information of sdcard.
@@ -125,24 +114,6 @@ public final class SDCardUtils {
         return path;
     }
 
-
-    /**
-     * Return the total size of external storage
-     *
-     * @return the total size of external storage
-     */
-    public static long getExternalTotalSize() {
-        return UtilsBridge.getFsTotalSize(getSDCardPathByEnvironment());
-    }
-
-    /**
-     * Return the available size of external storage.
-     *
-     * @return the available size of external storage
-     */
-    public static long getExternalAvailableSize() {
-        return UtilsBridge.getFsAvailableSize(getSDCardPathByEnvironment());
-    }
 
     /**
      * Return the total size of internal storage

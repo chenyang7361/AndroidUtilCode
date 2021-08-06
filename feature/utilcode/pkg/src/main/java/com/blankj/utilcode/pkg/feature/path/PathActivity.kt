@@ -45,18 +45,6 @@ class PathActivity : CommonActivity() {
                 CommonItemTitle("getInternalAppSpPath", PathUtils.getInternalAppSpPath()),
                 CommonItemTitle("getInternalAppNoBackupFilesPath", PathUtils.getInternalAppNoBackupFilesPath()),
 
-                CommonItemTitle("getExternalStoragePath", PathUtils.getExternalStoragePath()),
-                CommonItemTitle("getExternalMusicPath", PathUtils.getExternalMusicPath()),
-                CommonItemTitle("getExternalPodcastsPath", PathUtils.getExternalPodcastsPath()),
-                CommonItemTitle("getExternalRingtonesPath", PathUtils.getExternalRingtonesPath()),
-                CommonItemTitle("getExternalAlarmsPath", PathUtils.getExternalAlarmsPath()),
-                CommonItemTitle("getExternalNotificationsPath", PathUtils.getExternalNotificationsPath()),
-                CommonItemTitle("getExternalPicturesPath", PathUtils.getExternalPicturesPath()),
-                CommonItemTitle("getExternalMoviesPath", PathUtils.getExternalMoviesPath()),
-                CommonItemTitle("getExternalDownloadsPath", PathUtils.getExternalDownloadsPath()),
-                CommonItemTitle("getExternalDcimPath", PathUtils.getExternalDcimPath()),
-                CommonItemTitle("getExternalDocumentsPath", PathUtils.getExternalDocumentsPath()),
-
                 CommonItemTitle("getExternalAppDataPath", PathUtils.getExternalAppDataPath()),
                 CommonItemTitle("getExternalAppCachePath", PathUtils.getExternalAppCachePath()),
                 CommonItemTitle("getExternalAppFilesPath", PathUtils.getExternalAppFilesPath()),
